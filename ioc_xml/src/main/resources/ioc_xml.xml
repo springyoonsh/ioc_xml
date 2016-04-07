@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="phoneSeller" class="com.example.ioc_xml.PhoneSeller"/>
+	<bean id="foodSeller" class="com.example.ioc_xml.FoodSeller"/>
+
+	<bean id="mart" class="com.example.ioc_xml.Mart">
+		<property name="seller" ref="foodSeller"/>
+	</bean>	
+	
+</beans>
